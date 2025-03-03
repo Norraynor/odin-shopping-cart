@@ -1,24 +1,10 @@
 //homepage goes here
-import pepeIcon from "./assets/pepe-icon.webp";
+import NavBar from "./NavBar";
 function Home() {
 	return (
 		<>
 			<div className="container">
-				<div className="nav-bar">
-					{/*LOGO and NAME || Home Shop About */}
-					<div className="logo">
-						<div className="icon">
-							<img src="./assets/pepe-icon.webp" alt="pepe icon" />
-						</div>
-						<div className="name">Pepe Market</div>
-					</div>
-					<div className="nav">
-						{/* links to pages --router stuff? */}
-						<div className="home"></div>
-						<div className="shop"></div>
-						<div className="about"></div>
-					</div>
-				</div>
+				<NavBar />
 				<div className="main">
 					{/* some photo maybe or text? */}
 					<h1 className="welcome">Welcome to Pepe Market</h1>
