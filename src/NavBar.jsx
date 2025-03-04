@@ -1,5 +1,6 @@
 import pepeIcon from "./assets/pepe-icon.webp";
 import { Link } from "react-router-dom";
+import "./styles/NavBar.css";
 function NavBar() {
 	return (
 		<>

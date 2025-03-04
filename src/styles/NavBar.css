@@ -1,0 +1,41 @@
+.nav-bar {
+	background-color: rgb(59, 58, 58);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+.name {
+	color: rgb(182, 182, 182);
+	font-size: 1.5rem;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	gap: 20px;
+	justify-content: space-around;
+	padding: 0 24px;
+}
+
+li {
+	color: rgb(182, 182, 182);
+	font-size: 1.2rem;
+}
+a:link {
+	color: rgb(182, 182, 182);
+}
+/* visited link */
+a:visited {
+	color: rgb(182, 182, 182);
+}
+
+/* mouse over link */
+a:hover {
+	color: hotpink;
+}
