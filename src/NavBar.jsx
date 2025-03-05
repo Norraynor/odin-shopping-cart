@@ -6,7 +6,7 @@ function NavBar() {
 		<>
 			<div className="nav-bar">
 				{/*LOGO and NAME || Home Shop About */}
-				<div className="logo">
+				<div className="logos">
 					<div className="icon">
 						<img src={pepeIcon} alt="pepe icon" />
 					</div>

@@ -1,5 +1,7 @@
 //shop page goes here with possibility to add items to cart
 import NavBar from "./NavBar";
+import Footer from "./Footer";
+
 function Shop() {
 	return (
 		<>
@@ -7,6 +9,7 @@ function Shop() {
 				<NavBar />
 				<h1>Our Shop</h1>
 				{/* add items here */}
+				<Footer />
 			</div>
 		</>
 	);

@@ -1,0 +1,17 @@
+img {
+	max-width: 100%;
+}
+
+.sub-welcome {
+	font-style: italic;
+}
+
+.footer {
+	background-color: rgb(59, 58, 58);
+}
+
+.creator {
+	color: rgb(182, 182, 182);
+	font-size: 0.8rem;
+	padding: 16px;
+}
