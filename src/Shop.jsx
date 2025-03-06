@@ -8,7 +8,12 @@ function Shop() {
 			<div className="container">
 				<NavBar />
 				<h1>Our Shop</h1>
+				<div className="top-bar">
+					<div className="coins">{/* coins amout goes here */}</div>
+					<div className="cart">{/* cart icon with items in it */}</div>
+				</div>
 				{/* add items here */}
+				<div className="items-container">{/* cards go here */}</div>
 				<Footer />
 			</div>
 		</>
