@@ -1,8 +1,16 @@
 //shop page goes here with possibility to add items to cart
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import Card from "./Card";
+import { useEffect, useState } from "react";
 
 function Shop() {
+	const [items, setItems] = useState([]);
+	useEffect(() => {
+		fetch("https://fakestoreapi.com/products")
+			.then((response) => response.json())
+			.then((data) => setItems(data));
+	}, []);
 	return (
 		<>
 			<div className="container">
@@ -13,7 +21,12 @@ function Shop() {
 					<div className="cart">{/* cart icon with items in it */}</div>
 				</div>
 				{/* add items here */}
-				<div className="items-container">{/* cards go here */}</div>
+				<div className="items-container">
+					{/* cards go here */}
+					{items.map((element, index) => {
+						return <Card card={element} key={index} />;
+					})}
+				</div>
 				<Footer />
 			</div>
 		</>
