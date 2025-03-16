@@ -3,6 +3,7 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import Card from "./Card";
 import { useEffect, useState } from "react";
+import "./styles/Shop.css";
 
 function Shop() {
 	const [items, setItems] = useState([]);
