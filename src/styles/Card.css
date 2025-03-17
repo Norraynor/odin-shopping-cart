@@ -1,8 +1,15 @@
 .item-image {
 	max-width: 100px;
+	height: 70%;
+}
+.item-image img {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
 }
 .item {
-	padding: 16px 4px;
+	padding: 16px 8px;
 	/* display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -13,8 +20,13 @@
 	justify-items: center;
 	align-items: center;
 	gap: 8px;
+	border: 1px #8080802f solid;
+	border-radius: 4px;
 }
 .item h4,
 .item h5 {
 	margin: 0;
+	height: 15%;
+	font-size: 0.8rem;
+	align-self: self-start;
 }
