@@ -4,6 +4,7 @@ import ErrorPage from "./ErrorPage";
 import Shop from "./Shop";
 import About from "./About";
 import HomeMain from "./HomeMain";
+import Checkout from "./Checkout";
 
 const routes = [
 	{
@@ -22,6 +23,10 @@ const routes = [
 	{
 		path: "about",
 		element: <Home />,
+	},
+	{
+		path: "checkout",
+		element: <Checkout />,
 	},
 ];
 

@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Card from "./Card";
 import { useEffect, useState } from "react";
 import "./styles/Shop.css";
+import cart from "./assets/cart.svg";
 
 function Shop() {
 	const [items, setItems] = useState([]);
@@ -16,11 +17,13 @@ function Shop() {
 		<>
 			<div className="container">
 				<NavBar />
-				<h1>Our Shop</h1>
 				<div className="top-bar">
-					<div className="coins">{/* coins amout goes here */}</div>
-					<div className="cart">{/* cart icon with items in it */}</div>
+					<div className="cart">
+						<img src={cart} alt="" />
+						<span>(0)</span>
+					</div>
 				</div>
+				<h1>Our Shop</h1>
 				{/* add items here */}
 				<div className="items-container">
 					{/* cards go here */}
