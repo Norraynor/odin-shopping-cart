@@ -6,12 +6,15 @@ function NavBar() {
 		<>
 			<div className="nav-bar">
 				{/*LOGO and NAME || Home Shop About */}
-				<div className="logos">
-					<div className="icon">
-						<img src={pepeIcon} alt="pepe icon" />
+				<Link to="/">
+					<div className="logos">
+						<div className="icon">
+							<img src={pepeIcon} alt="pepe icon" />
+						</div>
+						<div className="name">Pepe Market</div>
 					</div>
-					<div className="name">Pepe Market</div>
-				</div>
+				</Link>
+
 				<div className="nav">
 					{/* links to pages --router stuff? */}
 					<ul>

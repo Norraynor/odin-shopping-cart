@@ -21,3 +21,10 @@
 	padding: 4px 8px;
 	margin: 8px;
 }
+a:link {
+	color: rgb(7, 7, 7);
+}
+/* visited link */
+a:visited {
+	color: rgb(7, 7, 7);
+}
