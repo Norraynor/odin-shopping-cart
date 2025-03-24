@@ -36,7 +36,10 @@ function Shop() {
 			<div className="container">
 				<NavBar />
 				<div className="top-bar">
-					<Link to="/checkout">
+					<Link
+						to="/checkout"
+						state={{ items: cartItems, count: cartItemsSize }}
+					>
 						<div className="cart">
 							<img src={cart} alt="" />
 							<span>({cartItemsSize})</span>
