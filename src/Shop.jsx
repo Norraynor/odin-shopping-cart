@@ -16,13 +16,29 @@ function Shop() {
 	}, []);
 	const [cartItems, setCartItems] = useState(Array(0));
 	const [cartItemsSize, setCartItemsSize] = useState(0);
+	function findItem(item) {
+		let foundItem = null;
+		cartItems.forEach((element) => {
+			if (element.id === item.id) {
+				foundItem = element;
+			}
+		});
+		if (item) {
+			foundItem = item;
+		}
 
-	function addItem(item) {
+		return foundItem;
+	}
+	function itemCount(item) {
+		let foundItem = findItem(item);
+		return foundItem ? foundItem.count : 0;
+	}
+	function addItem(item, count) {
 		console.log("adding item...", item);
 		let newArray = cartItems;
 		if (cartItems.filter((element) => item.id === element.id).length > 0) {
 			//increase count
-			newArray.find((element) => element.id == item.id).count++;
+			newArray.find((element) => element.id == item.id).count = count;
 		} else {
 			//add item
 			item.count = 1;
@@ -51,7 +67,14 @@ function Shop() {
 				<div className="items-container">
 					{/* cards go here */}
 					{items.map((element, index) => {
-						return <Card card={element} key={index} addItem={addItem} />;
+						return (
+							<Card
+								card={element}
+								key={index}
+								addItem={addItem}
+								count={itemCount(element)}
+							/>
+						);
 					})}
 				</div>
 				<Footer />
