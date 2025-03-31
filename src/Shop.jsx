@@ -33,7 +33,7 @@ function Shop() {
 		let foundItem = findItem(item);
 		return foundItem ? foundItem.count : 0;
 	}
-	function addItem(item, count) {
+	function addItem(item, count = 1) {
 		console.log("adding item...", item);
 		let newArray = cartItems;
 		if (cartItems.filter((element) => item.id === element.id).length > 0) {

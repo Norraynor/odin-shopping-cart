@@ -7,12 +7,14 @@ function Card(props) {
 		setCount(props.count);
 	}, [props.count]);
 	function handleClick() {
-		props.addItem(props.card, count);
+		props.addItem(props.card);
 		// add item to cart state here or API call to server to add item to cart.
 	}
-	function change(val) {
+	function handleChange(val) {
+		console.log(val.target.value);
+		if (val.target.value < 1) return;
 		setCount(val.target.value);
-		props.addItem(props.card, count);
+		props.addItem(props.card, val.target.value);
 	}
 	return (
 		<>
@@ -27,7 +29,7 @@ function Card(props) {
 						<input
 							type="number"
 							defaultValue={count}
-							onChange={change}
+							onChange={handleChange}
 							min={0}
 						/>
 					</>
