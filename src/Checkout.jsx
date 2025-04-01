@@ -10,12 +10,22 @@ function Checkout() {
 				<h1 className="title">Checkout</h1>
 				<h2 className="items">Shopping List:</h2>
 				<ul className="checkout-items-list">
+					<li className="checkout-item">
+						<div className="placeholde"></div>
+						<h3>Item</h3>
+						<p>Amount </p>
+						<p>Price</p>
+					</li>
 					{location.state.items.map((item, index) => (
 						<li className="checkout-item" key={index}>
 							<img className="checkout-img" src={item.image} alt="" />
 							<h3>{item.title}</h3>
-							<p>Count: {item.count}</p>
-							<p>Price: {item.price * item.count}</p>
+							<div className="amount">
+								<>
+									<input type="number" defaultValue={item.count} min={0} />
+								</>
+							</div>
+							<p>{item.price * item.count}</p>
 						</li>
 					))}
 				</ul>
