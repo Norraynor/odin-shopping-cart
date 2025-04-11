@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import "./styles/Card.css";
 function Card(props) {
 	const [count, setCount] = useState(0);
@@ -40,5 +40,14 @@ function Card(props) {
 		</>
 	);
 }
+Card.propTypes = {
+	card: PropTypes.shape({
+		image: PropTypes.string.isRequired,
+		title: PropTypes.string.isRequired,
+		price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+	}),
+	count: PropTypes.number,
+	addItem: PropTypes.func.isRequired,
+};
 
 export default Card;
