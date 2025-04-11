@@ -1,4 +1,5 @@
 import MarketImage from "./assets/market.jpg";
+import "./styles/HomeMain.css";
 function HomeMain() {
 	return (
 		<>

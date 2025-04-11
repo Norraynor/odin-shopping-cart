@@ -62,20 +62,22 @@ function Shop() {
 						</div>
 					</Link>
 				</div>
-				<h1>Our Shop</h1>
-				{/* add items here */}
-				<div className="items-container">
-					{/* cards go here */}
-					{items.map((element, index) => {
-						return (
-							<Card
-								card={element}
-								key={index}
-								addItem={addItem}
-								count={itemCount(element)}
-							/>
-						);
-					})}
+				<div className="shop-container">
+					<h1>Our Shop</h1>
+					{/* add items here */}
+					<div className="items-container">
+						{/* cards go here */}
+						{items.map((element, index) => {
+							return (
+								<Card
+									card={element}
+									key={index}
+									addItem={addItem}
+									count={itemCount(element)}
+								/>
+							);
+						})}
+					</div>
 				</div>
 				<Footer />
 			</div>

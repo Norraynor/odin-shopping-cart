@@ -20,10 +20,6 @@ const routes = [
 		element: <Shop />,
 	},
 	{
-		path: "about",
-		element: <Home />,
-	},
-	{
 		path: "checkout",
 		element: <Checkout />,
 	},
