@@ -1,12 +1,9 @@
-import App from "./App";
 import Home from "./Home";
 import ErrorPage from "./ErrorPage";
 import Shop from "./Shop";
 import About from "./About";
 import HomeMain from "./HomeMain";
 import Checkout from "./Checkout";
-import NavBar from "./NavBar";
-import { Component } from "react";
 
 const routes = [
 	{
@@ -29,14 +26,6 @@ const routes = [
 	{
 		path: "checkout",
 		element: <Checkout />,
-	},
-	{
-		Component: NavBar,
-		children: [
-			{ index: true, Component: Home },
-			{ path: "shop", Component: Shop },
-			{ path: "about", Component: About },
-		],
 	},
 ];
 
